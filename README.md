@@ -6,15 +6,15 @@
 - **Download from public Google Cloud Storage bucket with the following commands using the `gsutil` tool**:
   ```bash
   mkdir geospatial/
-  gsutil -m cp -R gs://geospatial/* geospatial/
+  gsutil -m cp -R gs://geospatial-space/* geospatial/
   ```
 - **Once Downloaded, Expected Folder Structure**:
   ```
   geospatial/
     ├── rasters/
-    │   ├── XXX_YYY_ZZ.tif  (part 1) 
+    │   ├── XXX_YYY_ZZ.tif
     │ 
-    └── coordinates.geojson (part 2) (vector file)
+    └── tiff1212.geojson (vector file)
   ```
 
 ## 2. Data Requirements
