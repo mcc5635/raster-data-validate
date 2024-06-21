@@ -5,15 +5,15 @@
 - **Tool**: `gsutil`
 - **Download from public Google Cloud Storage bucket with the following commands using the `gsutil` tool**:
   ```bash
-  mkdir pachama_interview_data/
-  gsutil -m cp -R gs://pachama-interview-data/* pachama_interview_data/
+  mkdir geospatial/
+  gsutil -m cp -R gs://geospatial/* geospatial/
   ```
 - **Once Downloaded, Expected Folder Structure**:
   ```
-  pachama_interview_data/
+  geospatial/
     ├── rasters/
-    │   ├── 299_383_10.tif  (part 1) 
-    │   ├── 299_384_10.tif  (part 2)
+    │   ├── XXX_YYY_ZZ.tif  (part 1) 
+    │ 
     └── coordinates.geojson (part 2) (vector file)
   ```
 
