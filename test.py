@@ -61,3 +61,31 @@ for idx, coord in coordinates_gdf.iterrows():
     # print(f'Saved {chip_filename}')
 
 print('Chip extraction completed.')
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Function to visualize a specific band of a chip
+def visualize_chip_band(chip, band):
+    plt.imshow(chip[band, :, :], cmap='gray')
+    plt.title(f'Chip Visualization - Band {band}')
+    plt.colorbar()
+    plt.show()
+
+# List of chip file paths to inspect
+chip_files = [
+    '/Users/mc2/Desktop/geospatial/chip_0_0_1.npy',
+    '/Users/mc2/Desktop/geospatial/chip_1_0_2.npy',
+    '/Users/mc2/Desktop/geospatial/chip_2_0_4.npy'
+]
+
+# Bands to inspect
+bands_to_inspect = [0, 100, 200]  # Adjust these values based on the bands you are interested in
+
+# Load and visualize the specified bands of each chip
+for chip_file in chip_files:
+    chip = np.load(chip_file)
+    print(f'Loaded {chip_file} with shape {chip.shape}')
+    for band in bands_to_inspect:
+        visualize_chip_band(chip, band)
