@@ -7,6 +7,7 @@
   ```bash
   mkdir geospatial/
   gsutil -m cp -R gs://geospatial-space/* geospatial/
+  (gsutil url: gs://geospatial-space)
   ```
 - **Once Downloaded, Expected Folder Structure**:
   ```
